@@ -4,7 +4,24 @@
   "description": "Projeto para o curso de Protractor da Escola TAT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix", 
+    "pretest": "webdriver-manager update", 
+    "test": "npm run test:chrome && npm run test:firefox", 
+    "test:chrome": "protractor configurations/chromeConfig.js",
+    "test:firefox": "protractor configurations/firefoxConfig.js"
+  },
+  "standard": {
+    "globals": [
+      "beforeAll",
+      "beforeEach",
+      "BhxBrowser",
+      "by",
+      "describe",
+      "element",
+      "expect",
+      "it"
+    ]
   },
   "repository": {
     "type": "git",
