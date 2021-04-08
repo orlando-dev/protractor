@@ -1,8 +1,8 @@
 name: Lint and tests
 on: push
 jobs: push
-  build: 
-    run-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
       - name: Project checkout
         uses: actions/checkout@v1
@@ -13,4 +13,4 @@ jobs: push
       - name: Lint
         run: npm run lint
       - name: E2E tests
-        run: npm run pretest:github && github && npm tests
+        run: npm run pretest:github && npm tests
