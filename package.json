@@ -2,8 +2,7 @@
   "name": "protractor",
   "version": "1.0.0",
   "description": "Projeto para o curso de Protractor da Escola TAT",
-  "main": "index.js",
-  "scripts": {
+    "scripts": {
     "lint": "npx standard",
     "lint:fix": "npx standard --fix",
     "pretest:github": "webdriver-manager update --version.chrome 89.0.4389.23",
@@ -28,9 +27,13 @@
     "type": "git",
     "url": "git+https://orlando-junior@bitbucket.org/orlando-junior/protractor.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "protractor",
+    "e2e",
+    "testing"
+  ],
+  "author": "Orlando Junior <orlando.junior07@hotmail.com>",
+  "license": "MIT",
   "homepage": "https://bitbucket.org/orlando-junior/protractor#readme",
   "devDependencies": {
     "faker": "^5.5.2",
