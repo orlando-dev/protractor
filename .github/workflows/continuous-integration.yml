@@ -1,0 +1,16 @@
+name: Lint and tests
+on: push
+jobs: push
+  build: 
+    run-on: ubuntu-latest
+    steps:
+      - name: Project checkout
+        uses: actions/checkout@v1
+      - name: Node.js setup
+        uses: actions/setup-node@v1.1.0
+      - name: Installation of dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: E2E tests
+        run: npm run pretest:github && github && npm tests
